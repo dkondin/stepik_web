@@ -16,16 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url, patterns
 from django.contrib import admin
 
-from qa import views
-
-print(type(views.test))
-
 urlpatterns = [
-    url(r"^$", "views.test"),
-    url(r"^login/.*$", "views.test", name="login"),
-    url(r"^signup/.*", "views.test", name="signup"),
-    url(r"^question/\d+/$", "views.test", name="question"),
-    url(r"^ask/.*", "views.test", name="ask"),
-    url(r"^popular/.*", "views.test", name="popular"),
-    url(r"^new/.*", "views.test", name="new"),
+    url(r'^', include("qa.urls")),
+    url(r'^admin/', admin.site.urls),
 ]
