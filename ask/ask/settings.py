@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'ask.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'stepik',
+        'NAME': 'stepik_web',
         'USER': 'box',
     }
 }
